@@ -1,0 +1,13 @@
+#
+# mrmarkuz repo
+#
+
+[mrmarkuz]
+name=mrmarkuz repo
+#mirrorlist=http://mirrorlist.nethserver.org/?release=$releasever&repo=base&arch$
+baseurl=https://smart-ict.services/mirror/mrmarkuz/$releasever/
+gpgkey=https://smart-ict.services/mirror/mrmarkuz/RPM-GPG-KEY
+gpgcheck=1
+enabled=1
+enablegroups=0
+
