@@ -1,0 +1,9 @@
+{
+    #
+    # 20mrmarkuz
+    #
+    push @cmnd_alias_httpd_admin, qw(
+        /usr/sbin/dmidecode
+    );
+    '';
+}

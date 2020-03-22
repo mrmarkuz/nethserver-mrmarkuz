@@ -1,0 +1,4 @@
+/etc/yum.repos.d/mrmarkuz.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-mrmarkuz
+/etc/cron.daily/check4mrmarkuzUpdates
+/sbin/e-smith/check4mrmarkuzUpdates

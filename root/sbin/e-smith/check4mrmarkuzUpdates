@@ -1,0 +1,31 @@
+#! /bin/sh
+
+mkdir -p /tmp/check4mrmarkuzUpdates.$$
+TMPFILE=`mktemp /tmp/check4mrmarkuzUpdates.$$/XXXXXXXXXX` || exit 1
+TMP1=`mktemp /tmp/check4mrmarkuzUpdates.$$/XXXXXXXXXX` || exit 1
+DOMAIN=$(/sbin/e-smith/db configuration get DomainName)|| exit 1
+
+MAILADDR="root admin@$DOMAIN"
+
+yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=mrmarkuz > $TMP1
+if [ $? = 100 ]; then
+  echo -e "Updates are available for mrmarkuz repository\n\n" >> $TMPFILE
+  cat $TMP1 >> $TMPFILE
+  echo -e "To apply the updates run the following command: \n
+yum update --enablerepo=mrmarkuz\n\n\n
+If you like to support me donate here:\n
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AXEJXN58KHS3A" >> $TMPFILE
+fi
+
+if [ -s $TMPFILE ]; then
+  if [ "$1" = "-m" ]; then
+    mail -s "Updates for mrmarkuz repo on `hostname`" $MAILADDR < $TMPFILE
+  else
+    echo "Updates for mrmarkuz repo on `hostname`"
+    cat $TMPFILE
+  fi
+fi
+
+rm -f $TMPFILE $TMP1
+rm -fr /tmp/check4mrmarkuzUpdates.*
+

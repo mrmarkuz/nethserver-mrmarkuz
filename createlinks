@@ -28,5 +28,6 @@ use esmith::Build::CreateLinks qw(:all);
 
 event_actions("nethserver-mrmarkuz-update", qw(
     initialize-default-databases        00
+    mrmarkuz_enablerepo                 10
 ));
 

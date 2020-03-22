@@ -1,6 +1,6 @@
 Name: nethserver-mrmarkuz
 Version: 0.0.1
-Release: 3%{?dist}
+Release: 4%{?dist}
 Summary: mrmarkuz NethServer repo
 License: GPL
 Source0: %{name}-%{version}.tar.gz
@@ -29,6 +29,11 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sun Mar 22 2020 Markus Neuberger <dev@markusneuberger.at> - 0.0.1-4
+- Domain change
+- Update mail
+- Backup
+- Metadata signing
 * Sun Oct 21 2018 Markus Neuberger <dev@markusneuberger.at> - 0.0.1-3
 - Change to mrmarkuz.goip.de
 * Wed Mar 07 2018 Markus Neuberger <dev@markusneuberger.at> - 0.0.1-1
