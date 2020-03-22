@@ -23,10 +23,10 @@ rm -rf %{buildroot}
 (cd root ; find . -depth -print | cpio -dump %{buildroot})
 %{genfilelist} %{buildroot} > %{name}-%{version}-%{release}-filelist
 
-
 %files -f %{name}-%{version}-%{release}-filelist
 %defattr(-,root,root)
 %dir %{_nseventsdir}/%{name}-update
+%attr(0755,root,root) %{_sysconfdir}/cron.daily/check4mrmarkuzUpdates
 
 
 %changelog
