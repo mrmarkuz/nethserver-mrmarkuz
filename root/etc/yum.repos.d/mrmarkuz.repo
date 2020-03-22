@@ -4,8 +4,9 @@
 
 [mrmarkuz]
 name=mrmarkuz repo for Nethserver $releasever - $basearch
-#mirrorlist=http://mirrorlist.nethserver.org/?release=$releasever&repo=base&arch$
 baseurl=https://mrmarkuz.dynu.net/mirror/mrmarkuz/$releasever/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mrmarkuz
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-mrmarkuz-2
 gpgcheck=1
+repo_gpgcheck=1
 enabled=1

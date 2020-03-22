@@ -5,6 +5,7 @@ Summary: mrmarkuz NethServer repo
 License: GPL
 Source0: %{name}-%{version}.tar.gz
 BuildArch: noarch
+URL: https://wiki.nethserver.org/doku.php?id=mrmarkuz_repository
 BuildRequires: nethserver-devtools
 
 %description
@@ -34,6 +35,7 @@ rm -rf %{buildroot}
 - Update mail
 - Backup
 - Metadata signing
+- URL Update
 * Sun Oct 21 2018 Markus Neuberger <dev@markusneuberger.at> - 0.0.1-3
 - Change to mrmarkuz.goip.de
 * Wed Mar 07 2018 Markus Neuberger <dev@markusneuberger.at> - 0.0.1-1
