@@ -12,9 +12,7 @@ if [ $? = 100 ]; then
   echo -e "Updates are available for mrmarkuz repository:\n" >> $TMPFILE
   cat $TMP1 >> $TMPFILE
   echo -e "\n\n\nTo apply the updates run the following command: \n
-yum update --enablerepo=mrmarkuz\n\n\n
-If you like to support me donate here:\n
-https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AXEJXN58KHS3A" >> $TMPFILE
+yum update --enablerepo=mrmarkuz\n" >> $TMPFILE
 fi
 
 if [ -s $TMPFILE ]; then
@@ -28,4 +26,3 @@ fi
 
 rm -f $TMPFILE $TMP1
 rm -fr /tmp/check4mrmarkuzUpdates.*
-
