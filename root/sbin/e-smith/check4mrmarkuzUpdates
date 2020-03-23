@@ -9,9 +9,9 @@ MAILADDR="root admin@$DOMAIN"
 
 yum -e 0 -d 0 check-update --disablerepo=* --enablerepo=mrmarkuz > $TMP1
 if [ $? = 100 ]; then
-  echo -e "Updates are available for mrmarkuz repository\n\n" >> $TMPFILE
+  echo -e "Updates are available for mrmarkuz repository:\n" >> $TMPFILE
   cat $TMP1 >> $TMPFILE
-  echo -e "To apply the updates run the following command: \n
+  echo -e "\n\n\nTo apply the updates run the following command: \n
 yum update --enablerepo=mrmarkuz\n\n\n
 If you like to support me donate here:\n
 https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AXEJXN58KHS3A" >> $TMPFILE
