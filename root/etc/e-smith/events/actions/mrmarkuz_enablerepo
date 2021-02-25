@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo '[NOTICE] applying new YUM repository configuration'
+echo '[NOTICE] applying new YUM repository configuration for mrmarkuz repo'
 exec /sbin/e-smith/signal-event software-repos-save

@@ -1,0 +1,6 @@
+#
+# nsapi_nethserver_mrmarkuz
+#
+Cmnd_Alias NSAPI_NETHSERVER_MRMARKUZ = \
+  /usr/libexec/nethserver/api/nethserver-mrmarkuz/read
+Defaults!NSAPI_NETHSERVER_MRMARKUZ !requiretty

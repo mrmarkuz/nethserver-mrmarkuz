@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use JSON;
+use NethServer::ApiTools;
+use LWP::Simple qw (head);
+my $input = NethServer::ApiTools::readInput();
+my $cmd = $input->{'action'};
+my $ret = {};
+my $url = 'http://mrmarkuz.dynu.net';
+my $head = `/usr/bin/curl -I $url --connect-timeout 2 --max-time 5`;
+if ( $cmd eq "app-info") {
+    if (($head =~ 'Location: http://mrmarkuz.dynu.net') ||
+        ($head =~ 'Location: https://mrmarkuz.dynu.net')) {
+            $ret = {
+                'name' => "mrmarkuz repo is online",
+                'url' => "https://mrmarkuz.dynu.net",
+                'description' => "You can support mrmarkuz repo by donating by clicking the button",
+                'summary' => "You can support mrmarkuz repo by donating by clicking the button"
+            };
+        }
+        else {
+            $ret = {
+                'name' => "mrmarkuz repo is offline",
+                'url' => "https://mrmarkuz.dynu.net",
+                'description' => "mrmarkuz repo seems to be offline",
+                'summary' => "mrmarkuz repo seems to be offline"
+            };
+        }
+} else {
+    NethServer::ApiTools::error();
+}
+print encode_json($ret);
