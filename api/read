@@ -7,22 +7,21 @@ use LWP::Simple qw (head);
 my $input = NethServer::ApiTools::readInput();
 my $cmd = $input->{'action'};
 my $ret = {};
-my $url = 'http://mrmarkuz.dynu.net';
+my $url = 'http://mrmarkuz.dynu.net/mirror/mrmarkuz/';
 my $head = `/usr/bin/curl -I $url --connect-timeout 2 --max-time 5`;
 if ( $cmd eq "app-info") {
-    if (($head =~ 'Location: http://mrmarkuz.dynu.net') ||
-        ($head =~ 'Location: https://mrmarkuz.dynu.net')) {
+    if ($head =~ 'HTTP/1.1 200 OK') {
             $ret = {
                 'name' => "mrmarkuz repo is online",
-                'url' => "https://mrmarkuz.dynu.net",
-                'description' => "You can support mrmarkuz repo by donating by clicking the button",
-                'summary' => "You can support mrmarkuz repo by donating by clicking the button"
+                'url' => "https://mrmarkuz.dynu.net/mirror/mrmarkuz/7/repoview/",
+                'description' => "Provides mrmarkuz repo, open link to get repoview",
+                'summary' => "Provides mrmarkuz repo, open link to get repoview"
             };
         }
         else {
             $ret = {
                 'name' => "mrmarkuz repo is offline",
-                'url' => "https://mrmarkuz.dynu.net",
+                'url' => "https://www.markusneuberger.at",
                 'description' => "mrmarkuz repo seems to be offline",
                 'summary' => "mrmarkuz repo seems to be offline"
             };

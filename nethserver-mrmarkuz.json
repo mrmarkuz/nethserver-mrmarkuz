@@ -1,15 +1,15 @@
 {
-  "id": "nethserver-stephdl",
-  "name": "stephdl",
+  "id": "nethserver-mrmarkuz",
+  "name": "mrmarkuz",
   "summary": "Provide the repository of mrmarkuz",
   "description": "Provide the repository of mrmarkuz",
   "url": "",
-  "provides": ["nethserver-stephdl"],
+  "provides": ["nethserver-mrmarkuz"],
   "release": {
-  "version": "_RELEASE_"
+  "version": "0.0.1"
 },
   "author": {
-  "name": "Stephane de Labrusse",
+  "name": "Markus Neuberger",
   "url": "https://github.com/mrmarkuz/nethserver-mrmarkuz",
   "email": "dev@markusneuberger.at"
 },
