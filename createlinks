@@ -28,6 +28,9 @@ use esmith::Build::CreateLinks qw(:all);
 
 event_actions("nethserver-mrmarkuz-update", qw(
     initialize-default-databases        00
-    mrmarkuz_enablerepo                 10
+));
+
+event_templates(("nethserver-mrmarkuz-update", qw(
+    /etc/nethserver/eorepo.conf
 ));
 
