@@ -30,7 +30,6 @@ event_actions("nethserver-mrmarkuz-update", qw(
     initialize-default-databases        00
 ));
 
-event_templates(("nethserver-mrmarkuz-update", qw(
+event_templates("nethserver-mrmarkuz-update", qw(
     /etc/nethserver/eorepo.conf
 ));
-

@@ -1,6 +1,6 @@
 Name: nethserver-mrmarkuz
 Version: 0.0.1
-Release: 5%{?dist}
+Release: 6%{?dist}
 Summary: mrmarkuz NethServer repo
 License: GPL
 Source0: %{name}-%{version}.tar.gz
